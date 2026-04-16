@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP SECTION -->
+<section class="main">
+
+  <h2>Password Strength Analyzer</h2>
+
+  <div class="avatar">
+    <img src="avatar.png" id="avatarImg">
+  </div>
+
+  <div class="input-box">
+    <input type="password" id="password" placeholder="Enter password" onkeyup="checkStrength()">
+    <button onclick="toggle()">Show</button>
+  </div>
+
+  <div class="bar">
+    <div id="strengthBar"></div>
+  </div>
+
+  <p id="result"></p>
+  <div id="suggestions"></div>
+
+  <button onclick="generatePassword()">Generate Password</button>
+  <button onclick="savePassword()">Save Password</button>
+
+</section>
+
+<!-- SCROLL SECTION -->
+<section class="dashboard">
+
+  <h3>Saved Passwords</h3>
+
+  <input type="text" id="search" placeholder="Search..." onkeyup="searchPassword()">
+
+  <ul id="list"></ul>
+
+</section>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <h3>Strong Password</h3>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
